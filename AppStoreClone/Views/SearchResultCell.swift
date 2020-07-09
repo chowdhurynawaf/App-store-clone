@@ -16,7 +16,7 @@ class SearchResultCell: UICollectionViewCell {
             categoryLabel.text = appResult.primaryGenreName
             
             if let rating = appResult.averageUserRating {
-                ratingsLabel.text = "Rating : \(rating.rounded() ?? 0) "
+                ratingsLabel.text = "Rating : \(rating.rounded() ) "
             }
             
             let url = URL(string: appResult.artworkUrl100)
