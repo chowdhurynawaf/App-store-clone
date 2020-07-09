@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class AppsHorizontalController: BaseListController {
+class AppsHorizontalController: HorizontalSnappingController{//BaseListController {
     let topBottomPadding : CGFloat = 24
     let lineSpacing      : CGFloat = 20
     
@@ -22,12 +22,18 @@ class AppsHorizontalController: BaseListController {
         collectionView.backgroundColor = .white
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            
-            
-            layout.scrollDirection = .horizontal
-        }
+//        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+//
+//
+//            layout.scrollDirection = .horizontal
+        
+//        }
+        
+        
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
+    
+    
     
     
  
@@ -63,6 +69,10 @@ extension AppsHorizontalController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 12, left: 16, bottom: 12, right: 16)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
     }
 }
 

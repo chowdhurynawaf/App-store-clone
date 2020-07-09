@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4249516424B7085400962035 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249516324B7085400962035 /* SocialApp.swift */; };
+		4249516624B7457800962035 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249516524B7457800962035 /* HorizontalSnappingController.swift */; };
+		4249516824B7462A00962035 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249516724B7462A00962035 /* BetterSnappingLayout.swift */; };
 		4272D1FF24B1F2CE00377418 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D1FE24B1F2CE00377418 /* AppSearchController.swift */; };
 		4272D20124B214C700377418 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D20024B214C700377418 /* SearchResultCell.swift */; };
 		4272D20524B2510B00377418 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D20424B2510B00377418 /* UIView+Layout.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		1A56B63CC501B92CEA9B9C2D /* Pods-AppStoreClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreClone.release.xcconfig"; path = "Target Support Files/Pods-AppStoreClone/Pods-AppStoreClone.release.xcconfig"; sourceTree = "<group>"; };
 		4249516324B7085400962035 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
+		4249516524B7457800962035 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
+		4249516724B7462A00962035 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		4272D1FE24B1F2CE00377418 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		4272D20024B214C700377418 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		4272D20424B2510B00377418 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				4272D20424B2510B00377418 /* UIView+Layout.swift */,
 				42D2D81724B2796E0082220B /* VerticalStackView.swift */,
+				4249516724B7462A00962035 /* BetterSnappingLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				42D3B67224B6127200BDF3D6 /* AppsPageHeader.swift */,
 				42D3B67424B614B600BDF3D6 /* AppsHeaderHorizontalController.swift */,
 				42D3B67624B62B2000BDF3D6 /* AppsHeaderCell.swift */,
+				4249516524B7457800962035 /* HorizontalSnappingController.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				4272D20524B2510B00377418 /* UIView+Layout.swift in Sources */,
 				4280BFA1249AA2AB00ED77B3 /* BaseTabBarController.swift in Sources */,
 				42F14CEC24B3AC8000CC6051 /* Service.swift in Sources */,
+				4249516824B7462A00962035 /* BetterSnappingLayout.swift in Sources */,
 				429D181E24B4B78200F5374B /* AppsGroupCell.swift in Sources */,
 				429D182724B5027700F5374B /* UIImageView+Ext.swift in Sources */,
 				42D3B67924B6355700BDF3D6 /* AppGroup.swift in Sources */,
@@ -355,6 +362,7 @@
 				429D181A24B4AFC200F5374B /* BaseListController.swift in Sources */,
 				42D2D81824B2796E0082220B /* VerticalStackView.swift in Sources */,
 				42D3B67324B6127200BDF3D6 /* AppsPageHeader.swift in Sources */,
+				4249516624B7457800962035 /* HorizontalSnappingController.swift in Sources */,
 				429D182324B4D7D200F5374B /* AppsHorizontalController.swift in Sources */,
 				429D182524B4FA1F00F5374B /* AppRowCell.swift in Sources */,
 			);

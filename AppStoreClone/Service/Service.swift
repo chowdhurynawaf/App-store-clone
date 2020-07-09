@@ -101,39 +101,41 @@ class Service {
         
         let urlString = "https://api.letsbuildthatapp.com/appstore/social"
         
-        guard let url = URL(string: urlString) else {return}
+        fetchGenericJSONData(urlString: urlString, completion: completion)
+        
+      //  guard let url = URL(string: urlString) else {return}
         
         
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            if let err = err {
-                completion(nil,err)
-                print(err.localizedDescription)
-                return
-            }
-            
-            
-            
-            guard let data = data else { return }
-            
-            do {
-                let objects = try JSONDecoder().decode([SocialApp].self, from: data)
-                completion(objects,nil)
-                //appGroup.feed.results.forEach({print($0.name)})
-                
-                //                self.appResults =  searchResult.results
-                //
-                //                DispatchQueue.main.async {
-                //                    self.collectionView.reloadData()
-                //                }
-                //
-                
-            }catch let jsonerr {
-                completion(nil,err)
-                print(jsonerr.localizedDescription)
-            }
-            
-            }.resume()
-        
+//        URLSession.shared.dataTask(with: url) { (data, response, err) in
+//            if let err = err {
+//                completion(nil,err)
+//                print(err.localizedDescription)
+//                return
+//            }
+//
+//
+//
+//            guard let data = data else { return }
+//
+//            do {
+//                let objects = try JSONDecoder().decode([SocialApp].self, from: data)
+//                completion(objects,nil)
+//                //appGroup.feed.results.forEach({print($0.name)})
+//
+//                //                self.appResults =  searchResult.results
+//                //
+//                //                DispatchQueue.main.async {
+//                //                    self.collectionView.reloadData()
+//                //                }
+//                //
+//
+//            }catch let jsonerr {
+//                completion(nil,err)
+//                print(jsonerr.localizedDescription)
+//            }
+//
+//            }.resume()
+//
         
         
     }
@@ -174,6 +176,34 @@ class Service {
             
             }.resume()
         
+        
+    }
+    
+    
+    func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?)-> ()) {
+        
+        //print("T is Tyep", T.self)
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, res, error) in
+            
+            if let error = error {
+                print("Failed to fetch apps:", error)
+                completion(nil, error)
+                return
+            }
+            
+            do {
+                let object = try JSONDecoder().decode(T.self, from: data!)
+                
+                completion(object, nil)
+            } catch let jsonError {
+                completion(nil, error)
+                print("Failed to decode json:", jsonError)
+            }
+            
+            }.resume()
         
     }
 }

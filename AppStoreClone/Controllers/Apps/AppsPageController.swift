@@ -14,7 +14,7 @@ class AppsPageController : BaseListController {
     let headerId = "headerId"
     
     let activityIndicatorView : UIActivityIndicatorView = {
-       let aiv = UIActivityIndicatorView(style: .whiteLarge)
+        let aiv = UIActivityIndicatorView(style: .whiteLarge)
         aiv.color = .black
         aiv.startAnimating()
         aiv.hidesWhenStopped = true
@@ -35,8 +35,6 @@ class AppsPageController : BaseListController {
         activityIndicatorView.fillSuperview()
         
         fetchdata()
-        
-        
     }
     
     //var editorsChoiceGame : AppGroup?
@@ -49,7 +47,7 @@ class AppsPageController : BaseListController {
         var group1 : AppGroup?
         var group2 : AppGroup?
         var group3 : AppGroup?
-
+        
         
         
         let dispatchGroup = DispatchGroup()
@@ -57,41 +55,30 @@ class AppsPageController : BaseListController {
         dispatchGroup.enter()
         
         Service.shared.fetchGames { (appGroup, err) in
-                dispatchGroup.leave()
-                group1 = appGroup
-
-       
+            dispatchGroup.leave()
+            group1 = appGroup
             
-            
+     
         }
-        
-        
-        
-        
-        //2
+ 
         dispatchGroup.enter()
         
         Service.shared.fetchTopGrossing { (appGroup, err) in
             
             dispatchGroup.leave()
-
+            
             group2 = appGroup
             
             
         }
         
-        
-        
-        
-        
-        
-        //3
+ 
         dispatchGroup.enter()
         
         Service.shared.fetchTopFree { (appGroup, err) in
             
             dispatchGroup.leave()
-
+            
             group3 = appGroup
             
             
@@ -104,7 +91,7 @@ class AppsPageController : BaseListController {
             dispatchGroup.leave()
             self.socialApps = apps ?? []
             DispatchQueue.main.async {
-
+                
             }
             
         }
@@ -113,7 +100,7 @@ class AppsPageController : BaseListController {
         dispatchGroup.notify(queue: .main) {
             
             self.activityIndicatorView.stopAnimating()
-
+            
             if let group = group1 {
                 self.groups.append(group)
             }
@@ -127,24 +114,14 @@ class AppsPageController : BaseListController {
             }
             
             self.collectionView.reloadData()
-
-
-
+            
+            
+            
         }
         
         
     }
-    
-        
-        
-        
-    
- 
- 
-    
-    
-  
-    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return groups.count
     }
