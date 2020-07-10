@@ -27,6 +27,8 @@ class AppSearchController: BaseListController {
     }()
 
     fileprivate let searchController = UISearchController(searchResultsController: nil)
+    
+    
 
 
     override func viewDidLoad() {
@@ -125,9 +127,17 @@ extension AppSearchController : UISearchBarDelegate {
                 }
             }
         })
+ 
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
+        let appDetailController = AppDetailController()
         
+        let appId = appResults[indexPath.item].trackId
+        appDetailController.appId = "\(appId)"
+        navigationController?.pushViewController(appDetailController, animated: true)
         
     }
     
