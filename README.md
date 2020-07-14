@@ -35,7 +35,7 @@
 
 
 
-# Screen Shots
+# Screenshots
 
 <img width="325" alt="Screen Shot 2020-07-15 at 2 57 35 AM" src="https://user-images.githubusercontent.com/59824683/87475928-681e1100-c647-11ea-8c34-b37afdb1aca3.png">
 <img width="332" alt="Screen Shot 2020-07-15 at 2 57 57 AM" src="https://user-images.githubusercontent.com/59824683/87475946-6d7b5b80-c647-11ea-8bc2-e66be86cf281.png">
