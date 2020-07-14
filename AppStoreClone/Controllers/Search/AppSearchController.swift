@@ -12,7 +12,6 @@ import SDWebImage
 private let reuseIdentifier = "Cell"
 
 
-
 class AppSearchController: BaseListController {
     
     fileprivate let cellId = "id1234"
@@ -29,8 +28,6 @@ class AppSearchController: BaseListController {
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +39,6 @@ class AppSearchController: BaseListController {
         setUPSearchBar()
         collectionView.addSubview(enterSearchLabel)
         enterSearchLabel.fillSuperview(padding: .init(top: 100, left: 50, bottom: 0, right: 50))
-        
-        
     }
     
     fileprivate func setUPSearchBar() {
@@ -57,8 +52,6 @@ class AppSearchController: BaseListController {
     
     fileprivate var appResults = [Result]()
     
-    
-
     fileprivate func fetchItunesApps() {
         
         Service.shared.fetchApps(searchResult: "apps") { results,err  in
@@ -90,18 +83,10 @@ class AppSearchController: BaseListController {
         let appResult = appResults[indexPath.item]
         
         cell.appResult = appResult
-        
-        
 
-        
-        
-        
         return cell
     }
-    
-    
-   
-    
+  
 }
 
 
@@ -141,7 +126,5 @@ extension AppSearchController : UISearchBarDelegate {
         navigationController?.pushViewController(appDetailController, animated: true)
         
     }
-    
-    
-    
+  
 }

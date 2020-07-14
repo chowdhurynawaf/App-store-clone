@@ -95,14 +95,7 @@ class SearchResultCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
-        
-//
-//        let labelStackView = UIStackView(arrangedSubviews: [
-//            nameLabel,categoryLabel,ratingsLabel
-//
-//        ])
-//        labelStackView.axis = .vertical
+
         
         
         let labelStackView = VerticalStackView(arrangedSubViews: [
@@ -125,35 +118,18 @@ class SearchResultCell: UICollectionViewCell {
         screenShotStackView.spacing = 12
         screenShotStackView.distribution = .fillEqually
         
-//        let overAllStackView = UIStackView(arrangedSubviews: [
-//        infoTopStackView,screenShotStackView
-//
-//        ])
+
         
         let overAllStackView  = VerticalStackView(arrangedSubViews: [
            infoTopStackView,screenShotStackView
             ], spacing: 16)
         
-        
-        
-//        overAllStackView.axis = .vertical
-//        overAllStackView.spacing = 16
-
-
+ 
         
         addSubview(overAllStackView)
         overAllStackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
         
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//
-//            stackView.topAnchor.constraint(equalTo: self.topAnchor),
-//            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor , constant: 16),
-//            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -16),
-//            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-//
-//        ])
+
     }
     
     required init?(coder: NSCoder) {

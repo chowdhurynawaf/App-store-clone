@@ -26,7 +26,6 @@ class Service {
             }
             
             
-            
             guard let data = data else { return }
             
             do {
@@ -34,12 +33,7 @@ class Service {
                 searchResult.results.forEach({print($0.trackName , $0.primaryGenreName)})
                 
                 completion(searchResult.results, nil)
-//                self.appResults =  searchResult.results
-//
-//                DispatchQueue.main.async {
-//                    self.collectionView.reloadData()
-//                }
-//
+
                 
             }catch let jsonerr {
                 print(jsonerr.localizedDescription)
@@ -47,18 +41,14 @@ class Service {
             }
             
             }.resume()
-        
-        
     }
     
     
     func fetchTopGrossing(completion: @escaping (AppGroup?, Error?) -> ()) {
         
-        
-        //"https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/50/explicit.json"
+ 
         
         let urlString = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/50/explicit.json"
-        
         
         
         
@@ -75,8 +65,6 @@ class Service {
          //"https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/50/explicit.json"
         
         
-        
-        
         fetchappGroup(urlString: urlString, completion: completion)
         
         
@@ -90,8 +78,6 @@ class Service {
         //"https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/50/explicit.json"
         
         
-        
-        
         fetchappGroup(urlString: urlString, completion: completion)
         
         
@@ -103,39 +89,7 @@ class Service {
         
         fetchGenericJSONData(urlString: urlString, completion: completion)
         
-      //  guard let url = URL(string: urlString) else {return}
-        
-        
-//        URLSession.shared.dataTask(with: url) { (data, response, err) in
-//            if let err = err {
-//                completion(nil,err)
-//                print(err.localizedDescription)
-//                return
-//            }
-//
-//
-//
-//            guard let data = data else { return }
-//
-//            do {
-//                let objects = try JSONDecoder().decode([SocialApp].self, from: data)
-//                completion(objects,nil)
-//                //appGroup.feed.results.forEach({print($0.name)})
-//
-//                //                self.appResults =  searchResult.results
-//                //
-//                //                DispatchQueue.main.async {
-//                //                    self.collectionView.reloadData()
-//                //                }
-//                //
-//
-//            }catch let jsonerr {
-//                completion(nil,err)
-//                print(jsonerr.localizedDescription)
-//            }
-//
-//            }.resume()
-//
+      
         
         
     }
@@ -160,14 +114,7 @@ class Service {
             do {
                 let appGroup = try JSONDecoder().decode(AppGroup.self, from: data)
                 completion(appGroup,nil)
-                //appGroup.feed.results.forEach({print($0.name)})
                 
-                //                self.appResults =  searchResult.results
-                //
-                //                DispatchQueue.main.async {
-                //                    self.collectionView.reloadData()
-                //                }
-                //
                 
             }catch let jsonerr {
                 completion(nil,err)
@@ -182,7 +129,6 @@ class Service {
     
     func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?)-> ()) {
         
-        //print("T is Tyep", T.self)
         
         guard let url = URL(string: urlString) else { return }
         

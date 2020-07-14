@@ -6,117 +6,7 @@
 //  Copyright © 2020 nawaf. All rights reserved.
 //
 
-//import UIKit
-//
-//class TodayController: BaseListController {
-//    var startingFrames : CGRect?
-//
-//    var appFullScreenController : UIViewController!
-//
-//    let todayCell = "todayCell"
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        collectionView.backgroundColor = .white
-//        
-//        collectionView.register(TodayCell.self, forCellWithReuseIdentifier: todayCell)
-//        
-//        navigationController?.isNavigationBarHidden = true
-//        
-//        
-//        
-//    }
-//    
-//
-//    
-//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 4
-//    }
-//    
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: todayCell, for: indexPath) as! TodayCell
-//    
-//        
-//        return cell
-//    }
-//}
-//
-//extension TodayController : UICollectionViewDelegateFlowLayout {
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return .init(width: view.frame.width - 64 , height: 450)
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 32
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return .init(top: 32, left: 0, bottom: 32, right: 0)
-//    }
-//    
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        
-//        
-//        let appFullScreenController = AppFullScreenController()
-//        
-//        self.appFullScreenController = appFullScreenController
-//
-//        let red = appFullScreenController.view!
-//        red.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleRemove)))
-//        
-//        view.addSubview(red)
-//        
-//        addChild(appFullScreenController)
-//
-//       
-//        //red.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-//        
-//        guard let cell =  collectionView.cellForItem(at: indexPath) else {return}
-//        //red.frame = cell.frame
-//        
-//        guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return}
-//        self.startingFrames = startingFrame
-//
-//       red.frame = startingFrame
-//       red.layer.cornerRadius = 16
-//        
-//        
-//        
-//        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-//            red.frame = self.view.frame
-//            self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
-//        }, completion: nil)
-//        
-// 
-//        
-//    }
-//    
-//
-//    @objc func handleRemove (gesture : UITapGestureRecognizer) {
-//        
-//        
-//        
-//        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-//            gesture.view?.frame = self.startingFrames ?? .zero
-//        }, completion: { _ in
-//            self.tabBarController?.tabBar.transform = .identity
-//            self.appFullScreenController.removeFromParent()
-//            gesture.view?.removeFromSuperview()
-//            
-//
-//        
-//        
-//        
-//        })
-//        
-//        
-//    }
-//    
-//    
-//}
 
-
-//Start __________________________
 
 import UIKit
 class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
@@ -417,10 +307,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
             superview = superview?.superview
         }
         
-        //
-        
-        
-        
+ 
     }
     
     static let cellSize: CGFloat = 500

@@ -31,7 +31,6 @@
 		4259385A24BDAF4F00280B0F /* BackEnabledNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259385924BDAF4F00280B0F /* BackEnabledNavigationController.swift */; };
 		4259385C24BDAFCF00280B0F /* TodayMultipleAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259385B24BDAFCF00280B0F /* TodayMultipleAppsController.swift */; };
 		426E21EC24B9D21E0048DA35 /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E21EB24B9D21E0048DA35 /* AppFullScreenController.swift */; };
-		426E21EE24B9FC0E0048DA35 /* AppFullScreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E21ED24B9FC0E0048DA35 /* AppFullScreenDescriptionCell.swift */; };
 		4272D1FF24B1F2CE00377418 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D1FE24B1F2CE00377418 /* AppSearchController.swift */; };
 		4272D20124B214C700377418 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D20024B214C700377418 /* SearchResultCell.swift */; };
 		4272D20524B2510B00377418 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272D20424B2510B00377418 /* UIView+Layout.swift */; };
@@ -85,7 +84,6 @@
 		4259385924BDAF4F00280B0F /* BackEnabledNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnabledNavigationController.swift; sourceTree = "<group>"; };
 		4259385B24BDAFCF00280B0F /* TodayMultipleAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMultipleAppsController.swift; sourceTree = "<group>"; };
 		426E21EB24B9D21E0048DA35 /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
-		426E21ED24B9FC0E0048DA35 /* AppFullScreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenDescriptionCell.swift; sourceTree = "<group>"; };
 		4272D1FE24B1F2CE00377418 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		4272D20024B214C700377418 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		4272D20424B2510B00377418 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
@@ -155,18 +153,17 @@
 		4252C1AB24B8B60B002D5A07 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				4259384C24BDA98C00280B0F /* TodayViews */,
-				4252C1AC24B8B626002D5A07 /* TodayController.swift */,
-				4252C1AE24B8B8A0002D5A07 /* TodayCell.swift */,
-				426E21EB24B9D21E0048DA35 /* AppFullScreenController.swift */,
-				426E21ED24B9FC0E0048DA35 /* AppFullScreenDescriptionCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
 		};
-		4259384C24BDA98C00280B0F /* TodayViews */ = {
+		4272D1FD24B1F2A100377418 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4252C1AB24B8B60B002D5A07 /* Today */,
+				4252C1AC24B8B626002D5A07 /* TodayController.swift */,
+				4252C1AE24B8B8A0002D5A07 /* TodayCell.swift */,
+				426E21EB24B9D21E0048DA35 /* AppFullScreenController.swift */,
 				4259384D24BDAB7300280B0F /* AppFullScreenDescCell.swift */,
 				4259384F24BDABA300280B0F /* AppFullscreenHeaderCell.swift */,
 				4259385124BDABE300280B0F /* BaseTodayCell.swift */,
@@ -174,14 +171,6 @@
 				4259385724BDADD100280B0F /* TodayMultipleAppCell.swift */,
 				4259385924BDAF4F00280B0F /* BackEnabledNavigationController.swift */,
 				4259385B24BDAFCF00280B0F /* TodayMultipleAppsController.swift */,
-			);
-			path = TodayViews;
-			sourceTree = "<group>";
-		};
-		4272D1FD24B1F2A100377418 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4252C1AB24B8B60B002D5A07 /* Today */,
 				429D181B24B4B48F00F5374B /* Search */,
 				4280BFA0249AA2AB00ED77B3 /* BaseTabBarController.swift */,
 				429D181C24B4B4A800F5374B /* Apps */,
@@ -445,7 +434,6 @@
 				4259385824BDADD100280B0F /* TodayMultipleAppCell.swift in Sources */,
 				4249516E24B7764400962035 /* AppDetailsCell.swift in Sources */,
 				4280BF8F249AA19000ED77B3 /* AppDelegate.swift in Sources */,
-				426E21EE24B9FC0E0048DA35 /* AppFullScreenDescriptionCell.swift in Sources */,
 				42F14CE924B371C200CC6051 /* SearchResult.swift in Sources */,
 				429D182924B5029B00F5374B /* UIButton+Ext.swift in Sources */,
 				4252C1A624B844D2002D5A07 /* ReviewController.swift in Sources */,

@@ -6,31 +6,7 @@
 //  Copyright © 2020 nawaf. All rights reserved.
 //
 
-//import UIKit
-//
-//class TodayCell: UICollectionViewCell {
-//    
-//    let imageView = UIImageView(image: #imageLiteral(resourceName: "star"))
-//
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//
-//        backgroundColor = #colorLiteral(red: 0.8157683015, green: 0.8076415658, blue: 0.8198977113, alpha: 1)
-//        layer.cornerRadius = 16
-//        addSubview(imageView)
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.centerInSuperview(size: .init(width: 200, height: 200))
-//
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
 
-
-//Start __________________________
 
 import UIKit
 class TodayCell: BaseTodayCell {
