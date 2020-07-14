@@ -132,11 +132,12 @@ extension AppSearchController : UISearchBarDelegate {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+       
         
         let appDetailController = AppDetailController()
-        
         let appId = appResults[indexPath.item].trackId
         appDetailController.appId = "\(appId)"
+
         navigationController?.pushViewController(appDetailController, animated: true)
         
     }
